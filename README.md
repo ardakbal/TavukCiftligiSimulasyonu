@@ -7,6 +7,7 @@ Bu program, C++  diliyle yazılmış bir tavuk çiftliği simülasyonu oluşturm
 Program, kullanıcıdan başlangıç sermayesi, yem fiyatları, yumurta satış fiyatı, tavuk alım 
 fiyatı ve simülasyon süresi gibi parametreleri alarak çiftliğin günlük performansını detaylı 
 olarak hesaplar ve raporlar. Kodlar Visual Studio 2022 derleyicisi ile yazılmıştır. 
+
 2. Programın Temel Amacı 
 • Çiftlikte bulunan tavukların günlük yumurtlama, yem tüketimi ve kesim 
 şartlarını takip ederek bir simülasyon yapılması. 
@@ -14,9 +15,11 @@ olarak hesaplar ve raporlar. Kodlar Visual Studio 2022 derleyicisi ile yazılmı
 tavukların maliyetlerinin hesaba katılması. 
 • Simülasyon sonunda çiftliğin kalan sermayesinin, yem miktarının vs. 
 belirlenmesi. 
+
 3. Sınıf Tanımlamaları 
 Tavuk Sınıfı 
 Tavuk() sınıfı: bir tavuğun günlük aktivitelerini ve durumunu takip eder. 
+
 • Değişkenler: 
 o yumurtlanmayanGun: Tavuğun kaç gündür yumurtlamadığını tutar. Her 
 tavukta değeri değişir, tamamen farklı olmak zorunda değildir. 
@@ -31,6 +34,7 @@ o yemYe(): Tavuğun günlük rastgele 100-120 gram arasında yem tüketmesini
 sağlar. 
 o yumurtlanmayanGunDegeri(), ToplamYumurtaDegeri(), 
 ciftlikteBulunulanGunDegeri(): Değişken değerlerini döner. 
+
 Ciftlik Sınıfı 
 Bu sınıf, çiftlikte bulunan tüm tavukların durumunu ve çiftliğin finansal yapısını takip 
 eder. 
@@ -46,15 +50,18 @@ o tavuk_vatandasi: Tavuk sınıfı nesnelerinin tutulduğu dinamik dizi.
 o Ciftlik(): Başlangıç parametreleri ile çiftliği kurar. 
 o simulasyonYap(int simuleGun): Belirtilen gün sayısı kadar çiftliği simüle 
 eder. 
-4. Programda Yapıla İşlemler 
+
+4. Programda Yapılan İşlemler 
 1. Kullanıcıdan Veri Alımı 
 o Başlangıç sermayesi, tavuk sayısı, yem fiyatı, yumurta satış fiyatı ve tavuk 
 alım fiyatı kullanıcıdan alınır. 
 o Tavuk sayısının 500'ü aşmaması kontrol edilir. 
+
 2. Başlangıç Değerlerinin Hesaplanması 
 o Tavuk alım maliyeti (tavukAlimFiyati * TavukSayisi) başlangıç 
 sermayesinden düşülür. 
 o Başlangıç yemi olan 700 kg yem maliyeti kalan sermayeden düşülür. 
+
 3. Günlük Simülasyon Döngüsü 
 o Her gün için aşağıdaki işlemler yapılır:  
 ▪ Her tavuğun:  
@@ -68,6 +75,7 @@ anlamına gelmez.
 ▪ Yumurta satışından elde edilen gelir hesaplanır. 
 ▪ Yem takviyesi yapılır (eğer kalan yem 70 kg'dan az ise 700 kg yem 
 alınır). 
+
 4. Sonuçların Raporlanması 
 o Günlük olarak:  
 ▪ Tüketilen yem miktarı 
@@ -78,12 +86,14 @@ o Günlük olarak:
 ▪ Kalan para miktarı 
 o Kalan para negatif olursa, çiftliğin iflas ettiği belirtilir ve simülasyon 
 sonlandırılır. 
+
 5. Özellikler  
 Mevcut Özellikler: 
 • Tavukların rastgele yumurtlama davranışı. 
 • Yem tüketimi ve yem takviyesi hesaplaması. 
 • Tavuğun kesim koşullarının uygulanması. 
 • Günlük detaylı rapor çıktısı. 
+
 6. Sonuç 
 Bu program, bir tavuk çiftliği işletmesinin günlük performansını başarılı bir şekilde 
 simüle eder. 
